@@ -14,52 +14,69 @@ In this setup, a CI/CD pipeline is configured using Jenkins to automatically bui
 The application is deployed on a cloud virtual machine, enabling automated and consistent delivery.
 
 🏗 Architecture Workflow
-Developer → GitHub Repository → Jenkins Pipeline → Build Application
-        → Docker Image Creation → Push to DockerHub → Deploy Container
+Developer
+   │
+   ▼
+GitHub Repository
+   │
+   ▼
+Jenkins CI/CD Pipeline
+   │
+   ▼
+Build Application
+   │
+   ▼
+Docker Image Creation
+   │
+   ▼
+Push to DockerHub
+   │
+   ▼
+Deploy Container
 ⚙️ Configuration Workflow
 
-Provisioned a VM instance on Google Cloud Compute Engine
+1️⃣ Provisioned VM on Google Cloud Compute Engine
 
-Installed Docker Engine
+2️⃣ Installed Docker Engine
 
-Installed and configured Jenkins
+3️⃣ Installed and configured Jenkins
 
-Installed required Jenkins plugins
+4️⃣ Installed required Jenkins plugins
 
-Connected GitHub repository to Jenkins
+5️⃣ Integrated GitHub repository with Jenkins
 
-Created a Jenkins Declarative Pipeline
+6️⃣ Configured Jenkins declarative pipeline
 
-Built the application
+7️⃣ Built application
 
-Created Docker image
+8️⃣ Created Docker image
 
-Tagged and pushed the image to DockerHub
+9️⃣ Tagged and pushed image to DockerHub
 
-Deployed the containerized application
+🔟 Deployed containerized application
 
 🔁 Jenkins Pipeline Stages
-Stage	Description
-Checkout SCM	Pull source code from Git repository
-Tool Initialization	Load required Jenkins tools
-Clean Workspace	Remove previous build artifacts
-Git Checkout	Clone application repository
-Install Dependencies	Install application dependencies
-Build Docker Image	Create container image
-Tag & Push Docker Image	Push image to DockerHub
+| Stage                | Description                       |
+| -------------------- | --------------------------------- |
+| Checkout SCM         | Fetch source code from repository |
+| Tool Initialization  | Load required Jenkins tools       |
+| Clean Workspace      | Remove previous build artifacts   |
+| Git Checkout         | Clone application source          |
+| Install Dependencies | Install required packages         |
+| Build Docker Image   | Create container image            |
+| Tag & Push Image     | Push Docker image to DockerHub    |
+
 🛠 Tech Stack
 
-CI/CD Tool: Jenkins
+| Category           | Tools                       |
+| ------------------ | --------------------------- |
+| CI/CD              | Jenkins                     |
+| Containerization   | Docker                      |
+| Cloud              | Google Cloud Compute Engine |
+| OS                 | Linux (Ubuntu)              |
+| Version Control    | Git & GitHub                |
+| Container Registry | DockerHub                   |
 
-Containerization: Docker
-
-Cloud Platform: Google Cloud Platform (Compute Engine)
-
-Operating System: Ubuntu Linux
-
-Version Control: Git & GitHub
-
-Container Registry: DockerHub
 
 📊 Key DevOps Learnings
 
@@ -82,6 +99,8 @@ Implement Infrastructure as Code using Terraform
 Integrate Monitoring with Prometheus & Grafana
 
 Implement GitHub Webhooks for automatic pipeline trigger
+📸 Screenshots
+
 
 👩‍💻 Author
 
@@ -91,6 +110,6 @@ Linux & Cloud Engineer | DevOps Enthusiast
 
 📧 nazneenfatima668@gmail.com
 
-⭐ If you found this useful
+LinkedIn:https://www.linkedin.com/in/nazneen-fatima-737223397
 
-Give this repository a star ⭐ and feel free to fork it.
+⭐ If you found this helpful, feel free to star the repository.
